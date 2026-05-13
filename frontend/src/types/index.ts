@@ -1,0 +1,6 @@
+export interface User { id: string; email: string; full_name: string; role: string; avatar_url?: string; city?: string; is_verified: boolean; }
+export interface TutorProfile { id: string; user_id: string; headline?: string; bio?: string; subjects: string[]; grades: string[]; teaching_mode: string[]; hourly_rate: number; years_experience: number; qualification?: string; verification_status: string; total_rating: number; review_count: number; is_featured: boolean; user: User; }
+export interface Booking { id: string; student_id: string; tutor_id: string; subject: string; scheduled_at: string; duration_minutes: number; status: string; amount: number; payment_status: string; }
+export interface Message { id: string; sender_id: string; receiver_id: string; content: string; is_read: boolean; created_at: string; }
+export interface Review { id: string; rating: number; comment?: string; student_name?: string; created_at: string; }
+export interface SearchResult { id: string; headline?: string; subjects: string[]; hourly_rate: number; total_rating: number; review_count: number; is_featured: boolean; score: number; user: { full_name: string; avatar_url?: string; city?: string; }; }
